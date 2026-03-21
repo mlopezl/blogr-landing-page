@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  --Red-500: hsl(356, 100%, 66%);
+  --Red-400: hsl(355, 100%, 74%);
+  --Blue-900: hsl(208, 49%, 24%);
+  --White: hsl(0, 100%, 100%);
+  --Gray-600: hsl(207, 13%, 34%);
+  --Gray-900: hsl(240, 10%, 16%);
+  --Orange-300: hsl(13, 100%, 72%, 90%);
+  --Red-550: hsl(353, 100%, 62%, 90%);
+  --Purple-950: hsl(237, 17%, 21%);
+  --Purple-900: hsl(237, 23%, 31%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Overpass", sans-serif;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--White);
+}
+
+.header {
+  background: linear-gradient(var(--Orange-300), var(--Red-550));
+  height: 550px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 0px 0px 0px 70px;
+}
+
+.background-pattern-mobile{
+    position: absolute;
+    width: 1200px;
+    top: -250px;
+    left: -350px;
+    z-index: 1;
+}
+
+.header .header__logo-container,
+.header .header__hamburger,
+.header__title,
+.header__description,
+.header__buttons{
+    position: relative;
+    z-index: 2;
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 85px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header__logo{
+    width: 80px;
+}
+
+.header__hamburger{
+    height: 18px;
+}
+
+.header__title{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--White);
+    font-size: 1.9rem;
+    margin-bottom: 25px;
+}
+
+.header__description{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    color: var(--White);
+    width: 90%;
+    font-size: 1rem;
+}
+
+.header__buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 120px;
+}
+
+.header__button{
+    width: 120px;
+    height: 35px;
+    border: 1px solid var(--White);
+    outline: none;
+    border-radius: 15px;
+}
+
+.header__button--start{
+    background-color: var(--White);
+}
+
+.header__button--start a{
+    color: var(--Red-550);
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.header__button--learn{
+    background-color: transparent;
+}
+
+.header__button--learn a{
+    color: var(--White);
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.features img {
+  width: 300px;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+}
