@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
   --Red-500: hsl(356, 100%, 66%);
@@ -13,23 +13,23 @@
   --Purple-900: hsl(237, 23%, 31%);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-family: "Overpass", sans-serif;
-    font-size: 16px;
+html {
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-body{
-    background-color: var(--White);
+body {
+  background-color: var(--White);
 }
 
 .header {
@@ -43,100 +43,252 @@ body{
   border-radius: 0px 0px 0px 70px;
 }
 
-.background-pattern-mobile{
-    position: absolute;
-    width: 1200px;
-    top: -250px;
-    left: -350px;
-    z-index: 1;
+.background-pattern-mobile {
+  position: absolute;
+  width: 1200px;
+  top: -250px;
+  left: -350px;
+  z-index: 1;
 }
 
 .header .header__logo-container,
 .header .header__hamburger,
 .header__title,
 .header__description,
-.header__buttons{
-    position: relative;
-    z-index: 2;
+.header__buttons {
+  position: relative;
+  z-index: 2;
 }
 
-.header__nav{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
-    margin-bottom: 85px;
-    padding-left: 20px;
-    padding-right: 20px;
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 85px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.header__logo{
-    width: 80px;
+.header__logo {
+  width: 80px;
 }
 
-.header__hamburger{
-    height: 18px;
+.header__hamburger {
+  height: 18px;
 }
 
-.header__title{
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    color: var(--White);
-    font-size: 1.9rem;
-    margin-bottom: 25px;
+.header__title {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--White);
+  font-size: 1.9rem;
+  margin-bottom: 25px;
 }
 
-.header__description{
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 25px;
-    color: var(--White);
-    width: 90%;
-    font-size: 1rem;
+.header__description {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  color: var(--White);
+  width: 90%;
+  font-size: 1rem;
 }
 
-.header__buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 120px;
+.header__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 120px;
 }
 
-.header__button{
-    width: 120px;
-    height: 35px;
-    border: 1px solid var(--White);
-    outline: none;
-    border-radius: 15px;
+.header__button {
+  width: 120px;
+  height: 35px;
+  border: 1px solid var(--White);
+  outline: none;
+  border-radius: 15px;
 }
 
-.header__button--start{
-    background-color: var(--White);
+.header__button--start {
+  background-color: var(--White);
 }
 
-.header__button--start a{
-    color: var(--Red-550);
-    font-size: 0.9rem;
-    font-weight: bold;
-    font-family: "Ubuntu", sans-serif;
+.header__button--start a {
+  color: var(--Red-550);
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.header__button--learn{
-    background-color: transparent;
+.header__button--learn {
+  background-color: transparent;
 }
 
-.header__button--learn a{
-    color: var(--White);
-    font-weight: bold;
-    font-family: "Ubuntu", sans-serif;
+.header__button--learn a {
+  color: var(--White);
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.features img {
+.features,
+.features__editor,
+.features__editor-articles,
+.features__editor-article,
+.features__infraestructure,
+.features__infraestructure-article,
+.features__application,
+.features__application-articles,
+.features__application-article,
+.footer,
+.footer__product,
+.footer__product ul,
+.footer__company,
+.footer__company ul,
+.footer__connect,
+.footer__connect ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.features {
+  margin-top: 60px;
+  gap: 30px;
+}
+
+.features__editor {
+  margin-bottom: 30px;
+}
+
+.features__title,
+.features__editor-article h3,
+.features__application-article h3 {
+  color: var(--Blue-900);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.features__editor-container {
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features__editor-container img {
+  width: 100%;
+}
+
+.features__editor-articles {
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.features__editor-article {
+  width: 87%;
+  text-align: center;
+  gap: 20px;
+}
+
+.features__editor-article p,
+.features__application-article p {
+  color: var(--Gray-600);
+  line-height: 25px;
+}
+
+.features__infraestructure {
+  background-color: var(--Purple-950);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  padding-top: 200px;
+  padding-bottom: 60px;
+  margin-top: -200px;
+  margin-bottom: 30px;
+  border-radius: 0px 100px 0px 100px;
+}
+
+.circle__pattern {
+  position: absolute;
+  top: -140px;
+  z-index: 1;
+  width: 400px;
+}
+
+.features__infraestruture-container {
+  position: relative;
+  z-index: 2;
+}
+
+.features__infraestruture-container img {
   width: 300px;
 }
 
+.features__infraestructure-article {
+  width: 90%;
+  text-align: center;
+  margin-top: 10px;
+  gap: 20px;
+  color: var(--White);
+}
+
+.features__infraestructure-article h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.features__infraestructure-article p {
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+.features__application-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features__laptop-illustration {
+  width: 400px;
+  margin-bottom: 30px;
+}
+
+.features__application-article,
+.features__application-articles {
+  width: 100%;
+  padding: 10px;
+}
+
+.features__application-article h3 {
+  margin-bottom: 10px;
+}
+
+.features__application-article p {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 82%;
+}
+
 .footer {
-  background-color: black;
+  background-color: var(--Gray-900);
   color: white;
+  padding: 10px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  gap: 60px;
+}
+
+.footer nav {
+  gap: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  gap: 10px;
 }
