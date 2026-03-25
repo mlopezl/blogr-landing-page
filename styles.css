@@ -32,6 +32,17 @@ body {
   background-color: var(--White);
 }
 
+.container{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.mobile-menu{
+  position: absolute;
+  z-index: 100;
+  background-color: var(--White);
+}
+
 .header {
   background: linear-gradient(var(--Orange-300), var(--Red-550));
   height: 550px;
@@ -52,7 +63,7 @@ body {
 }
 
 .header .header__logo-container,
-.header .header__hamburger,
+.header .header__toggle,
 .header__title,
 .header__description,
 .header__buttons {
@@ -73,8 +84,9 @@ body {
   width: 80px;
 }
 
-.header__hamburger {
-  height: 18px;
+.header__toggle {
+  width: 30px;
+  height: 20px;
 }
 
 .header__title {
@@ -291,4 +303,8 @@ body {
 .footer ul {
   list-style: none;
   gap: 10px;
+}
+
+.hidden{
+  display: none;
 }
