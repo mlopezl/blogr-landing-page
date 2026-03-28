@@ -22,6 +22,8 @@ const mobileMenuConnectIcon = document.getElementById(
   "mobile-menu-connect-icon",
 );
 
+const mobileMenuToggleButtons = document.querySelectorAll('.mobile-menu__toggle');
+
 function openMobileMenu() {
   headerToggle.src = "./images/icon-close.svg";
   mobileMenu.classList.remove("hidden");
@@ -40,6 +42,9 @@ function closeSubmenus() {
   mobileMenuProductIcon.classList.remove("rotate");
   mobileMenuCompanyIcon.classList.remove("rotate");
   mobileMenuConnectIcon.classList.remove("rotate");
+  Array.from(mobileMenuToggleButtons).forEach(button =>{
+    button.classList.remove('button-color');
+  })
 }
 
 function openMobileProductSubmenu() {
@@ -65,28 +70,34 @@ headerToggle.addEventListener("click", () => {
   }
 });
 
-mobileMenuProduct.addEventListener("click", () => {
+mobileMenuProduct.addEventListener("click", (e) => {
+  let menuProduct = e.target.closest('button');
   if (mobileMenuProductSubmenu.classList.contains("hidden")) {
     closeSubmenus();
     openMobileProductSubmenu();
+    menuProduct.classList.add('button-color');
   } else {
     closeSubmenus();
   }
 });
 
-mobileMenuCompany.addEventListener("click", () => {
+mobileMenuCompany.addEventListener("click", (e) => {
+  let menuProduct = e.target.closest('button');
   if (mobileMenuCompanySubmenu.classList.contains("hidden")) {
     closeSubmenus();
     openMobileCompanySubmenu();
+    menuProduct.classList.add('button-color');
   } else {
     closeSubmenus();
   }
 });
 
-mobileMenuConnect.addEventListener("click", () => {
+mobileMenuConnect.addEventListener("click", (e) => {
+  let menuProduct = e.target.closest('button');
   if (mobileMenuConnectSubmenu.classList.contains("hidden")) {
     closeSubmenus();
     openMobileConnectSubmenu();
+    menuProduct.classList.add('button-color');
   } else {
     closeSubmenus();
   }
