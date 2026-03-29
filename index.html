@@ -64,6 +64,8 @@
       </ul>
     </nav>
     <header class="header">
+      <img src="./images/bg-pattern-intro-mobile.svg" alt="" class="background-pattern-mobile">
+      <img src="./images/bg-pattern-intro-desktop.svg" alt="" class="background-pattern-desktop">
       <nav class="header__nav">
         <div class="header__logo-container">
           <img src="./images/logo.svg" alt="Blogr logo" class="header__logo">
@@ -71,7 +73,65 @@
         <div class="header__toggle-container">
           <img src="./images/icon-hamburger.svg" alt="Hamburger menu icon" class="header__toggle">
         </div>
-        <img src="./images/bg-pattern-intro-mobile.svg" alt="" class="background-pattern-mobile">
+      </nav>
+      <nav class="header__nav-desktop">
+        <div class="header__logo-container">
+          <img src="./images/logo.svg" alt="Blogr logo" class="header__logo">
+          <ul>
+            <li id="desktop-menu-product" class="desktop-menu__item">
+              <button class="desktop-menu__toggle" type="button">
+                Product
+                <img src="./images/icon-arrow-light.svg" alt="Toggle Product" id="desktop-menu-product-icon"
+                  class="desktop-menu__toggle-icon" />
+              </button>
+              <ul class="desktop-menu__submenu hidden" id="desktop-menu-product-submenu">
+                <li>
+                  Overview
+                </li>
+                <li>
+                  Pricing
+                </li>
+                <li>
+                  Marketplace
+                </li>
+                <li>
+                  Features
+                </li>
+                <li>
+                  Integrations
+                </li>
+              </ul>
+            </li>
+            <li id="desktop-menu-company" class="desktop-menu__item">
+              <button class="desktop-menu__toggle" type="button">
+                Company
+                <img src="./images/icon-arrow-light.svg" alt="Toggle company" id="desktop-menu-company-icon"
+                  class="desktop-menu__toggle-icon" />
+              </button>
+              <ul class="desktop-menu__submenu desktop-menu__submenu--company hidden" id="desktop-menu-company-submenu">
+                <li>About</li>
+                <li>Team</li>
+                <li>Blog</li>
+                <li>Careers</li>
+              </ul>
+            </li>
+            <li id="desktop-menu-connect" class="desktop-menu__item">
+              <button class="desktop-menu__toggle" type="button">
+                Connect
+                <img src="./images/icon-arrow-light.svg" alt="Toggle connect" id="desktop-menu-connect-icon"
+                  class="desktop-menu__toggle-icon" />
+              </button>
+              <ul class="desktop-menu__submenu desktop-menu__submenu--connect hidden" id="desktop-menu-connect-submenu">
+                <li>Contact</li>
+                <li>Newsletter</li>
+                <li>LinkedIn</li>
+              </ul>
+          </ul>
+        </div>
+        <ul>
+          <li>Login</li>
+          <li><button class="sign-up__button">Sign Up</button></li>
+        </ul>
       </nav>
       <h1 class="header__title">A modern publishing platform</h1>
       <p class="header__description">Grow your audience and build your online brand</p>

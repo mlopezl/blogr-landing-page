@@ -101,7 +101,7 @@ body {
   justify-content: center;
 }
 
-.mobile-menu__toggle-icon{
+.mobile-menu__toggle-icon {
   width: 10px;
   height: 10px;
 }
@@ -168,6 +168,15 @@ body {
   z-index: 1;
 }
 
+.background-pattern-desktop {
+  position: absolute;
+  width: 200%;
+  top: -500px;
+  left: -200px;
+  z-index: 1;
+  display: none;
+}
+
 .header .header__logo-container,
 .header .header__toggle,
 .header__title,
@@ -184,6 +193,10 @@ body {
   margin-bottom: 85px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.header__nav-desktop {
+  display: none;
 }
 
 .header__logo {
@@ -365,7 +378,7 @@ body {
   padding: 10px;
 }
 
-.features__application-article{
+.features__application-article {
   max-width: 400px;
 }
 
@@ -406,20 +419,92 @@ body {
   transform: rotate(180deg);
 }
 
-.button-color{
+.button-color {
   color: var(--Blue-800);
 }
 
-@media(min-width: 550px){
+@media (min-width: 550px) {
   .mobile-menu {
-  width: 460px;
-  left: calc(50% - 230px);
-}
+    width: 460px;
+    left: calc(50% - 230px);
+  }
 
-  .footer{
+  .footer {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-evenly;
+  }
+}
+@media (min-width: 769px) {
+  .header__nav {
+    display: none;
+  }
+
+  .background-pattern-mobile {
+    display: none;
+  }
+
+  .background-pattern-desktop {
+    display: block;
+  }
+
+  .header__nav-desktop {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 2;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 120px;
+    padding: 0px 20px 0px 20px;
+  }
+
+  .header__logo-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .header__nav-desktop ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+  }
+
+  .header__nav-desktop button,
+  .header__nav-desktop li {
+    background-color: transparent;
+    border: none;
+    color: var(--White);
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  .header__nav-desktop .sign-up__button {
+    width: 100px;
+    height: 30px;
+    background-color: var(--White);
+    color: var(--Red-550);
+    border-radius: 20px;
+  }
+
+  .header__title {
+    font-size: 2.5rem;
+  }
+
+  .header__description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .background-pattern-desktop {
+    width: 250%;
+    top: -1400px;
+    left: -500px;
   }
 }
