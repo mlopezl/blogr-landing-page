@@ -454,8 +454,8 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    z-index: 2;
+    gap: 30px;
+    z-index: 3;
     position: relative;
     margin-top: 30px;
     margin-bottom: 120px;
@@ -471,7 +471,7 @@ body {
   .header__nav-desktop ul {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     list-style: none;
   }
 
@@ -499,6 +499,51 @@ body {
   .header__description {
     font-size: 1.2rem;
   }
+
+  .desktop-menu__item button:focus,
+  .desktop-menu__item button:hover {
+    text-decoration: underline;
+  }
+
+  .header__logo-container .desktop-menu__submenu{
+  position: absolute;
+  background-color: var(--White);
+  width: 120px;
+  list-style: none;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 40px;
+}
+
+.desktop-menu__submenu li {
+  color: var(--Purple-950);
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  z-index: 100;
+}
+
+.desktop-menu__submenu li:hover {
+  color: var(--Gray-900);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 300ms ease;
+}
+
+.desktop-menu__submenu--product{
+  left: 80px;
+}
+
+.desktop-menu__submenu--company{
+  left: 215px;
+}
 }
 
 @media (min-width: 1200px) {

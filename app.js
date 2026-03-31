@@ -21,6 +21,22 @@ const mobileMenuCompanyIcon = document.getElementById(
 const mobileMenuConnectIcon = document.getElementById(
   "mobile-menu-connect-icon",
 );
+const desktopMenuProduct = document.getElementById("desktop-menu-product");
+const desktopMenuCompany = document.getElementById("desktop-menu-company");
+const desktopMenuConnect = document.getElementById("desktop-menu-connect");
+const desktopMenuProductIcon = document.getElementById("desktop-menu-product-icon");
+const desktopMenuCompanyIcon = document.getElementById("desktop-menu-company-icon");
+const desktopMenuConnectIcon = document.getElementById("desktop-menu-connect-icon");
+const desktopMenuProductSubmenu = document.getElementById(
+  "desktop-menu-product-submenu",
+);
+const desktopMenuCompanySubmenu = document.getElementById(
+  "desktop-menu-company-submenu",
+);
+const desktopMenuConnectSubmenu = document.getElementById(
+  "desktop-menu-connect-submenu",
+);
+
 
 const mobileMenuToggleButtons = document.querySelectorAll('.mobile-menu__toggle');
 
@@ -28,6 +44,58 @@ function openMobileMenu() {
   headerToggle.src = "./images/icon-close.svg";
   mobileMenu.classList.remove("hidden");
 }
+
+function openDesktopSubmenu() {
+  desktopMenuProductSubmenu.classList.remove("hidden");
+  desktopMenuProductIcon.classList.add("rotate");
+} 
+
+function openDesktopCompanySubmenu() {
+  desktopMenuCompanySubmenu.classList.remove("hidden");
+  desktopMenuCompanyIcon.classList.add("rotate");
+}
+
+function openDesktopConnectSubmenu() {
+  desktopMenuConnectSubmenu.classList.remove("hidden");
+  desktopMenuConnectIcon.classList.add("rotate");
+}
+
+function closeDesktopSubmenus(){
+  desktopMenuProductSubmenu.classList.add("hidden");
+  desktopMenuCompanySubmenu.classList.add("hidden");
+  desktopMenuConnectSubmenu.classList.add("hidden");
+  desktopMenuProductIcon.classList.remove("rotate");
+  desktopMenuCompanyIcon.classList.remove("rotate");
+  desktopMenuConnectIcon.classList.remove("rotate");
+}
+
+desktopMenuProduct.addEventListener("click", () => {
+  if (desktopMenuProductSubmenu.classList.contains("hidden")) {
+    closeDesktopSubmenus();
+    openDesktopSubmenu();
+  } else {
+    closeDesktopSubmenus();
+  }
+});
+
+desktopMenuCompany.addEventListener("click", () => {
+  if (desktopMenuCompanySubmenu.classList.contains("hidden")) {
+    closeDesktopSubmenus();
+    openDesktopCompanySubmenu();  
+  } else {
+    closeDesktopSubmenus();
+  }
+});
+
+desktopMenuConnect.addEventListener("click", () => {
+  if (desktopMenuConnectSubmenu.classList.contains("hidden")) {
+    closeDesktopSubmenus();
+    openDesktopConnectSubmenu();
+  } else {
+    closeDesktopSubmenus();
+  }
+});
+
 
 function closeMobileMenu() {
   headerToggle.src = "./images/icon-hamburger.svg";
@@ -104,7 +172,13 @@ mobileMenuConnect.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  if (!headerToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+  if (!headerToggle.contains(e.target) && 
+      !mobileMenu.contains(e.target) &&
+      !desktopMenuProduct.contains(e.target) &&
+      !desktopMenuCompany.contains(e.target) &&
+      !desktopMenuConnect.contains(e.target)) 
+      {
     closeMobileMenu();
+    closeDesktopSubmenus();
   }
 });
