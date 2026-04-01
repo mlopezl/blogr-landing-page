@@ -32,6 +32,7 @@ a {
 
 body {
   background-color: var(--White);
+  overflow-x: hidden;
 }
 
 .container {
@@ -288,9 +289,17 @@ body {
   align-items: center;
 }
 
-.features__editor-container img {
+.features__editor-illustration {
   width: 100%;
   max-width: 300px;
+}
+
+.features__editor-desktop-illustration {
+  display: none;
+  width: 700px;
+  position: absolute;
+  top: 610px;
+  right: -300px;
 }
 
 .features__editor-articles {
@@ -544,6 +553,75 @@ body {
 .desktop-menu__submenu--company{
   left: 215px;
 }
+
+.features h2{
+  margin-bottom: 100px;
+  font-size: 2rem;
+}
+
+.features__editor {
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1000px;
+}
+
+.features__editor-container {
+  order: 2;
+  max-width: 50%;
+}
+
+.features__editor-articles {
+  order: 1;
+  max-width: 50%;
+}
+
+.features__editor-article{
+  text-align: left;
+  align-items: flex-start;
+}
+
+.features__editor-illustration{
+  display: none;
+}
+
+.features__editor-desktop-illustration {
+  display: block;
+}
+
+.circle__pattern {
+  left: -100px;
+  width: 500px;
+}
+
+.features__infraestruture-container{
+  align-self: flex-start;
+}
+
+.features__infraestructure{
+  padding-top: 50px;
+  height: 300px;
+}
+
+.features__infraestructure-article{
+  position: absolute;
+  right: 15px;
+  text-align: left;
+  max-width: 50%;
+  align-items: flex-start;
+}
+
+.features__infraestructure-article h3{
+  align-self: left;
+  justify-self: left;
+}
+}
+
+@media (min-width: 900px) {
+  .features__editor-desktop-illustration {
+    width: 750px;
+    right: -250px;
+    top: 600px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -552,4 +630,28 @@ body {
     top: -1400px;
     left: -500px;
   }
+
+  .features__editor-desktop-illustration {
+    right: -150px;
+  }
+
+  .circle__pattern {
+    width: 900px;
+    top: -450px;
+    left: -200px;
+  }
+
+  .features__infraestruture-container{
+    width: 500px;
+    margin-left: 150px;
+  }
+
+  .features__infraestruture-container img{
+    width: 400px;
+  }
+
+  .features__infraestructure{
+    margin-top: -300px;
+  }
+
 }
